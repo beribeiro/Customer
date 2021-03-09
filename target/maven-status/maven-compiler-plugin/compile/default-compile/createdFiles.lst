@@ -1,0 +1,6 @@
+validators\dto\ClienteDtoValidator.class
+dto\ClienteDto.class
+domain\Cliente.class
+domain\Endereco.class
+dto\EnderecoDto.class
+validators\dto\EnderecoDtoValidator.class
