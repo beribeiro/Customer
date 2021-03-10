@@ -3,7 +3,6 @@ package br.com.client.services;
 import br.com.client.adapters.CustomerPersistence;
 import br.com.client.domain.Customer;
 import br.com.client.exceptions.UnprocessableEntityException;
-import br.com.fluentvalidator.context.ValidationResult;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.NoResultException;
@@ -18,9 +17,9 @@ public class ClientService {
         try {
             customerPersistence.save(customer);
 
-        } catch (Exception ex){
+        } catch (Exception exception){
             //TODO ADD MESSAGE AND ERROR OBJECT
-            throw new UnprocessableEntityException(ValidationResult.fail(null));
+            throw (UnprocessableEntityException) exception.getCause();
         }
 
     }
@@ -31,7 +30,7 @@ public class ClientService {
             return customerPersistence.find(cpf);
         }catch (NoResultException exception){
             //TODO ADD MESSAGE AND ERROR OBJECT
-            throw new UnprocessableEntityException(ValidationResult.fail(null));
+            throw (UnprocessableEntityException) exception.getCause();
         }
 
     }

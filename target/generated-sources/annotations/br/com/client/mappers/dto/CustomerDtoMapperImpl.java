@@ -7,7 +7,7 @@ import org.mapstruct.factory.Mappers;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2021-03-10T01:56:40-0300",
+    date = "2021-03-10T11:32:07-0300",
     comments = "version: 1.4.1.Final, compiler: javac, environment: Java 1.8.0_281 (Oracle Corporation)"
 )
 public class CustomerDtoMapperImpl extends CustomerDtoMapper {

@@ -1,7 +1,10 @@
 br\com\client\model\AddressModel.class
 br\com\client\mappers\dto\CustomerDtoMapper.class
 br\com\client\domain\Endereco.class
+br\com\client\RestControlletExceptionHandler.class
+br\com\client\exceptions\Error.class
 br\com\client\Application.class
+br\com\client\exceptions\ErrorValidationResultTransform.class
 br\com\client\utils\Regex.class
 br\com\client\adapters\CustomerPersistenceImpl.class
 br\com\client\validators\dto\ClienteDtoValidator.class
