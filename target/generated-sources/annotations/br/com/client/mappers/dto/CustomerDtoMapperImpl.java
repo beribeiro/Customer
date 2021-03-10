@@ -7,12 +7,12 @@ import org.mapstruct.factory.Mappers;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2021-03-09T23:20:12-0300",
+    date = "2021-03-10T01:51:10-0300",
     comments = "version: 1.4.1.Final, compiler: javac, environment: Java 1.8.0_281 (Oracle Corporation)"
 )
-public class CustomerMapperImpl extends CustomerMapper {
+public class CustomerDtoMapperImpl extends CustomerDtoMapper {
 
-    private final AddressMapper addressMapper = Mappers.getMapper( AddressMapper.class );
+    private final AddressDtoMapper addressDtoMapper = Mappers.getMapper( AddressDtoMapper.class );
 
     @Override
     public Customer mapFrom(ClienteDto clienteDto) {
@@ -24,7 +24,7 @@ public class CustomerMapperImpl extends CustomerMapper {
 
         customer.setName( clienteDto.getName() );
         customer.setCpf( clienteDto.getCpf() );
-        customer.setAddress( addressMapper.mapFrom( clienteDto.getEnderecoDto() ) );
+        customer.setAddress( addressDtoMapper.mapFrom( clienteDto.getEnderecoDto() ) );
 
         return customer;
     }

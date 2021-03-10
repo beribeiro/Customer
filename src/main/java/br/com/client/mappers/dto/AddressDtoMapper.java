@@ -7,9 +7,9 @@ import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
 
 @Mapper
-public abstract class AddressMapper {
+public abstract class AddressDtoMapper {
 
-    public static final AddressMapper INSTANCE = Mappers.getMapper(AddressMapper.class);
+    public static final AddressDtoMapper INSTANCE = Mappers.getMapper(AddressDtoMapper.class);
 
     @Mapping(source = "address",target = "address")
     @Mapping(source = "district", target = "district")

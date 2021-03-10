@@ -6,10 +6,10 @@ import javax.annotation.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2021-03-09T23:20:12-0300",
+    date = "2021-03-10T01:51:10-0300",
     comments = "version: 1.4.1.Final, compiler: javac, environment: Java 1.8.0_281 (Oracle Corporation)"
 )
-public class AddressMapperImpl extends AddressMapper {
+public class AddressDtoMapperImpl extends AddressDtoMapper {
 
     @Override
     public Endereco mapFrom(EnderecoDto enderecoDto) {

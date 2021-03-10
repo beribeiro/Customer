@@ -1,2 +1,3 @@
-br\com\client\mappers\dto\AddressMapperTest.class
-br\com\client\mappers\dto\CustomerMapperTest.class
+br\com\client\mappers\dto\AddressModelDtoMapperTest.class
+br\com\client\mappers\dto\CustomerDtoMapperTest.class
+br\com\client\mappers\model\CustomerModelMapperTest.class

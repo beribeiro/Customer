@@ -1,8 +1,8 @@
 package br.com.client.adapters;
 
 import br.com.client.domain.Customer;
-import br.com.client.model.Address;
-import br.com.client.model.Client;
+import br.com.client.model.AddressModel;
+import br.com.client.model.CustomerModel;
 
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
@@ -17,7 +17,7 @@ public class CustomerPersistenceImpl implements CustomerPersistence {
     public Customer save(Customer cliente) {
 
 
-        Client client = new Client("Bruno", "12345678" , new Address());
+        CustomerModel client = new CustomerModel("Bruno", "12345678" , new AddressModel());
 
         entityManager.merge(client);
 
@@ -30,7 +30,7 @@ public class CustomerPersistenceImpl implements CustomerPersistence {
     @Override
     public Customer find(String cpf) {
         try{
-            Client client = entityManager.createNamedQuery(Client.CONSULTA_CLIENT_CPF, Client.class)
+            CustomerModel client = entityManager.createNamedQuery(CustomerModel.CONSULTA_CLIENT_CPF, CustomerModel.class)
                     .setParameter("cpf", cpf).getSingleResult();
         } catch (NoResultException exception){
             //client nao encontrado

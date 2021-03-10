@@ -10,10 +10,10 @@ import javax.persistence.*;
 @Setter
 @Table(name = "CLIENT")
 @NoArgsConstructor
-@NamedQuery(name= Client.CONSULTA_CLIENT_CPF,
+@NamedQuery(name= CustomerModel.CONSULTA_CLIENT_CPF,
         query =" FROM Client client "
         + "WHERE client.cpf = :cpf")
-public class Client {
+public class CustomerModel {
 
     public static final String CONSULTA_CLIENT_CPF = "CONSULTA_CLIENT_CPF";
 
@@ -30,11 +30,11 @@ public class Client {
 
     @OneToOne
     @JoinColumn(name = "ADDRESS_CLIENT", nullable = false)
-    private Address address;
+    private AddressModel addressModel;
 
-    public Client(String name, String cpf, Address address) {
+    public CustomerModel(String name, String cpf, AddressModel addressModel) {
         this.name = name;
         this.cpf = cpf;
-        this.address = address;
+        this.addressModel = addressModel;
     }
 }

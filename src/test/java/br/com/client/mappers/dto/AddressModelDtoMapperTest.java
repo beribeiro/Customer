@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class AddressMapperTest {
+public class AddressModelDtoMapperTest {
 
     @Test
     public void successTest(){
@@ -18,7 +18,7 @@ public class AddressMapperTest {
         enderecoDto.setState("SP");
         enderecoDto.setZipCode("1234567");
 
-        Endereco endereco = AddressMapper.INSTANCE.mapFrom(enderecoDto);
+        Endereco endereco = AddressDtoMapper.INSTANCE.mapFrom(enderecoDto);
 
         assertEquals(endereco.getAddress(), endereco.getAddress());
         assertEquals(endereco.getDistrict(), endereco.getDistrict());

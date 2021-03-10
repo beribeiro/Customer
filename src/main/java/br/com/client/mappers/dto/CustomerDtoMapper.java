@@ -6,10 +6,10 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
 
-@Mapper(uses = AddressMapper.class)
-public abstract class CustomerMapper {
+@Mapper(uses = AddressDtoMapper.class)
+public abstract class CustomerDtoMapper {
 
-    public static final CustomerMapper INSTANCE = Mappers.getMapper(CustomerMapper.class);
+    public static final CustomerDtoMapper INSTANCE = Mappers.getMapper(CustomerDtoMapper.class);
 
     @Mapping(source = "name",target = "name")
     @Mapping(source = "cpf", target = "cpf")

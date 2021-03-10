@@ -13,7 +13,7 @@ import javax.persistence.Table;
 @Setter
 @Table(name = "ADDRESS")
 @NoArgsConstructor
-public class Address {
+public class AddressModel {
 
     @Id
     @GeneratedValue

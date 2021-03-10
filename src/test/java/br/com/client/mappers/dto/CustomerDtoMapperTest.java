@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CustomerMapperTest {
+public class CustomerDtoMapperTest {
 
     @Test
     public void successTest(){
@@ -15,7 +15,7 @@ public class CustomerMapperTest {
         clienteDto.setName("João");
         clienteDto.setCpf("124.125.126-78");
 
-        Customer customer = CustomerMapper.INSTANCE.mapFrom(clienteDto);
+        Customer customer = CustomerDtoMapper.INSTANCE.mapFrom(clienteDto);
 
         assertEquals(clienteDto.getName(), customer.getName());
         assertEquals(clienteDto.getCpf(), customer.getCpf());
