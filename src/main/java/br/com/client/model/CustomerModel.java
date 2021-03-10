@@ -10,12 +10,12 @@ import javax.persistence.*;
 @Setter
 @Table(name = "CLIENT")
 @NoArgsConstructor
-@NamedQuery(name= CustomerModel.CONSULTA_CLIENT_CPF,
+@NamedQuery(name= CustomerModel.CONSULTA_CUSTOMER_CPF,
         query =" FROM Client client "
         + "WHERE client.cpf = :cpf")
 public class CustomerModel {
 
-    public static final String CONSULTA_CLIENT_CPF = "CONSULTA_CLIENT_CPF";
+    public static final String CONSULTA_CUSTOMER_CPF = "CONSULTA_CUSTOMER_CPF";
 
     @Id
     @GeneratedValue

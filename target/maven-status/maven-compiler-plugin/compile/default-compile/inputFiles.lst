@@ -3,6 +3,7 @@ C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\validato
 C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\mappers\dto\CustomerDtoMapper.java
 C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\model\AddressModel.java
 C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\Application.java
+C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\mappers\domain\CustomerMapper.java
 C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\services\ClientService.java
 C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\exceptions\UnprocessableEntityException.java
 C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\validators\dto\EnderecoDtoValidator.java

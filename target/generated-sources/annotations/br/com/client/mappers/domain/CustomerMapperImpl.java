@@ -1,4 +1,4 @@
-package br.com.client.mappers.model;
+package br.com.client.mappers.domain;
 
 import br.com.client.domain.Customer;
 import br.com.client.model.CustomerModel;
@@ -9,19 +9,19 @@ import javax.annotation.Generated;
     date = "2021-03-10T01:56:40-0300",
     comments = "version: 1.4.1.Final, compiler: javac, environment: Java 1.8.0_281 (Oracle Corporation)"
 )
-public class CustomerModelMapperImpl extends CustomerModelMapper {
+public class CustomerMapperImpl extends CustomerMapper {
 
     @Override
-    public Customer mapFrom(CustomerModel customerModel) {
-        if ( customerModel == null ) {
+    public CustomerModel mapFrom(Customer customer) {
+        if ( customer == null ) {
             return null;
         }
 
-        Customer customer = new Customer();
+        CustomerModel customerModel = new CustomerModel();
 
-        customer.setName( customerModel.getName() );
-        customer.setCpf( customerModel.getCpf() );
+        customerModel.setName( customer.getName() );
+        customerModel.setCpf( customer.getCpf() );
 
-        return customer;
+        return customerModel;
     }
 }
