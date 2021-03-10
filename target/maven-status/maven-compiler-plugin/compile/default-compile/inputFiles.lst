@@ -1,6 +1,5 @@
 C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\model\CustomerModel.java
 C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\validators\dto\ClienteDtoValidator.java
-C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\exceptions\Error.java
 C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\RestControlletExceptionHandler.java
 C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\mappers\dto\CustomerDtoMapper.java
 C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\model\AddressModel.java
@@ -13,11 +12,12 @@ C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\adapters
 C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\dto\ClienteDto.java
 C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\mappers\model\CustomerModelMapper.java
 C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\controller\ClientController.java
-C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\exceptions\ErrorValidationResultTransform.java
 C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\dto\EnderecoDto.java
+C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\returns\Error.java
 C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\validators\dto\CpfValidator.java
 C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\mappers\dto\AddressDtoMapper.java
 C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\domain\Endereco.java
 C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\utils\Regex.java
 C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\adapters\CustomerPersistenceImpl.java
 C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\domain\Customer.java
+C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\returns\ErrorValidationResultTransform.java

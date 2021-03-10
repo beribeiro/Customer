@@ -18,11 +18,13 @@ public class CpfValidator extends AbstractValidator<String> {
                 .must(not(nullValue()))
                 .withMessage("Favor preencher o campo Cpf")
                 .withAttempedValue(cpf-> cpf)
+                .withFieldName("cpf")
                 .critical()
 
                 .must(stringMatches(REGEX_CPF))
                 .withMessage("CPF inválido")
-                .withAttempedValue(cpf-> cpf);
+                .withAttempedValue(cpf-> cpf)
+                .withFieldName("cpf");
 
     }
 }

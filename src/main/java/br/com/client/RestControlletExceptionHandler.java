@@ -15,7 +15,7 @@ public class RestControlletExceptionHandler {
 
 
     @ExceptionHandler
-    ResponseEntity<Object> handleException (final Exception exception, final WebRequest request){
+    ResponseEntity<Object> handleException (final Exception exception){
 
         Error error = new Error(HttpStatus.INTERNAL_SERVER_ERROR.toString(), "Erro genérico");
 
@@ -24,9 +24,9 @@ public class RestControlletExceptionHandler {
     }
 
     @ExceptionHandler
-    ResponseEntity<Object> handleException (final UnprocessableEntityException exception, final WebRequest request){
+    ResponseEntity<Object> handleException (final UnprocessableEntityException exception){
 
-        Error error = exception.getError(new ErrorValidationResultTransform(exception.getHttpStatus(), HttpStatus.UNPROCESSABLE_ENTITY.toString()));
+        final Error error = exception.getError(new ErrorValidationResultTransform(exception.getHttpStatus(), "UNPROCESSABLE_ENTITY"));
 
         return ResponseEntity.status(exception.getHttpStatus()).contentType(MediaType.APPLICATION_JSON).body(error);
 

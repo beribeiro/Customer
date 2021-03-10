@@ -3,7 +3,6 @@ package br.com.client.returns;
 import br.com.fluentvalidator.context.ValidationResult;
 import br.com.fluentvalidator.transform.ValidationResultTransform;
 import org.springframework.http.HttpStatus;
-import org.springframework.validation.FieldError;
 
 import java.util.LinkedList;
 import java.util.List;
