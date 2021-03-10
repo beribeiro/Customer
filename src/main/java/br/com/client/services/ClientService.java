@@ -3,13 +3,18 @@ package br.com.client.services;
 import br.com.client.adapters.CustomerPersistence;
 import br.com.client.domain.Customer;
 import br.com.client.exceptions.UnprocessableEntityException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.NoResultException;
+import javax.transaction.Transactional;
 
 @Component
+@Transactional
 public class ClientService {
 
+
+    @Autowired
     CustomerPersistence<Customer> customerPersistence;
 
     public void createOrUpdateCustomer(Customer customer){
@@ -27,7 +32,7 @@ public class ClientService {
     public Customer getCustomer(String cpf){
 
         try {
-            return customerPersistence.find(cpf);
+            return customerPersistence.findByCpf(cpf);
         }catch (NoResultException exception){
             //TODO ADD MESSAGE AND ERROR OBJECT
             throw (UnprocessableEntityException) exception.getCause();

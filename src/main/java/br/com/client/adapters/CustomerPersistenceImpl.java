@@ -5,12 +5,16 @@ import br.com.client.mappers.domain.CustomerMapper;
 import br.com.client.mappers.model.CustomerModelMapper;
 import br.com.client.model.AddressModel;
 import br.com.client.model.CustomerModel;
+import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
+import javax.persistence.LockModeType;
 import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
+import java.util.Optional;
 
-public class CustomerPersistenceImpl implements CustomerPersistence {
+@Repository
+public class CustomerPersistenceImpl implements CustomerPersistence<Customer> {
 
     @PersistenceContext
     private EntityManager entityManager;
@@ -27,10 +31,14 @@ public class CustomerPersistenceImpl implements CustomerPersistence {
 
 
     @Override
-    public Customer find(String cpf) {
+    public Customer findByCpf(String cpf) {
         try{
             CustomerModel customerModel = entityManager.createNamedQuery(CustomerModel.CONSULTA_CUSTOMER_CPF, CustomerModel.class)
                     .setParameter("cpf", cpf).getSingleResult();
+
+            //final Optional<CustomerModel> customerModelOptional = Optional.ofNullable(entityManager.find(CustomerModel.class, cpf, LockModeType.PESSIMISTIC_WRITE));
+
+            //final CustomerModel customerModel = customerModelOptional.orElse(null);
 
             return CustomerModelMapper.INSTANCE.mapFrom(customerModel);
 

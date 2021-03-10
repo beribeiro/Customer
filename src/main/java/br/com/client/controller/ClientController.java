@@ -1,7 +1,10 @@
 package br.com.client.controller;
 
+import br.com.client.domain.Customer;
 import br.com.client.dto.ClienteDto;
 import br.com.client.exceptions.UnprocessableEntityException;
+import br.com.client.mappers.domain.CustomerMapper;
+import br.com.client.mappers.dto.CustomerDtoMapper;
 import br.com.client.services.ClientService;
 import br.com.client.validators.dto.ClienteDtoValidator;
 import br.com.client.validators.dto.CpfValidator;
@@ -36,9 +39,11 @@ public class ClientController {
 
         cpfValidator.validate(cpf).isInvalidThrow(UnprocessableEntityException.class);
 
-        service.getCustomer(cpf);
+        Customer customer = service.getCustomer(cpf);
 
-        return ResponseEntity.status(HttpStatus.OK).body(new ClienteDto());
+        ClienteDto clienteDto = CustomerMapper.INSTANCE.mapToDto(customer);
+
+        return ResponseEntity.status(HttpStatus.OK).body(clienteDto);
     }
 
 }

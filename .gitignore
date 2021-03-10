@@ -13,5 +13,5 @@ logs/
 .iml
 .vscode/
 /bin/
-.jar
-.xml
+*.jar
+*.xml

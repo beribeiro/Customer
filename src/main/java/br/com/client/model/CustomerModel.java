@@ -9,11 +9,14 @@ import javax.persistence.*;
 
 @Getter
 @Setter
+@Entity
 @Table(name = "CUSTOMER")
 @NoArgsConstructor
-@NamedQuery(name= CustomerModel.CONSULTA_CUSTOMER_CPF,
-        query =" FROM Customer customer "
-        + "WHERE customer.cpf = :cpf")
+@NamedQueries({
+        @NamedQuery(name= CustomerModel.CONSULTA_CUSTOMER_CPF,
+                query =" FROM CustomerModel customer "
+                        + "WHERE customer.cpf = :cpf")
+})
 public class CustomerModel {
 
     public static final String CONSULTA_CUSTOMER_CPF = "CONSULTA_CUSTOMER_CPF";
