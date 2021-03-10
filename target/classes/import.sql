@@ -1,0 +1,1 @@
+insert into CLIENT(NAME_CLIENT,CPF_CLIENT,ADDRESS_CLIENT) values('Bruno','12345678',null);
