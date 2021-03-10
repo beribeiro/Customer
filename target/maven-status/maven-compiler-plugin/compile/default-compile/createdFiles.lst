@@ -15,6 +15,7 @@ br\com\client\mappers\domain\CustomerMapperImpl.class
 br\com\client\adapters\CustomerPersistence.class
 br\com\client\services\ClientService.class
 br\com\client\returns\Error.class
+br\com\client\returns\FieldError.class
 br\com\client\exceptions\UnprocessableEntityException.class
 br\com\client\mappers\domain\CustomerMapper.class
 br\com\client\dto\ClienteDto.class

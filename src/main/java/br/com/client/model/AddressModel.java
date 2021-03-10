@@ -32,7 +32,7 @@ public class AddressModel {
     @Column(name = "STATE",nullable = false)
     private String state;
 
-    @Column(name = "ZIPCODE", nullable = false)
+    @Column(name = "ZIP_CODE", nullable = false)
     private Integer zipCode;
 
 }
