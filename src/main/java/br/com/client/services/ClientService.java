@@ -1,0 +1,21 @@
+package br.com.client.services;
+
+import br.com.client.adapters.CustomerPersistence;
+import br.com.client.domain.Customer;
+
+public class ClientService {
+
+    CustomerPersistence<Customer> customerPersistence;
+
+    public void createOrUpdateCustomer(Customer customer){
+
+        customerPersistence.save(customer);
+
+    }
+
+    public Customer getCustomer(Integer cpf){
+
+        return customerPersistence.find(cpf);
+    }
+
+}
