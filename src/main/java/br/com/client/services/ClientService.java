@@ -2,7 +2,9 @@ package br.com.client.services;
 
 import br.com.client.adapters.CustomerPersistence;
 import br.com.client.domain.Customer;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ClientService {
 
     CustomerPersistence<Customer> customerPersistence;
@@ -13,7 +15,7 @@ public class ClientService {
 
     }
 
-    public Customer getCustomer(Integer cpf){
+    public Customer getCustomer(String cpf){
 
         return customerPersistence.find(cpf);
     }

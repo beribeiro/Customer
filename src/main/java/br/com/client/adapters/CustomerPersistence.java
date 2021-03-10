@@ -6,6 +6,6 @@ public interface CustomerPersistence<T extends Customer>{
 
     Customer save (final T cliente);
 
-    Customer find (final Integer cpf);
+    Customer find (final String cpf);
 
 }

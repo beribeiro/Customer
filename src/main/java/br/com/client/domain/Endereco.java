@@ -1,15 +1,20 @@
 package br.com.client.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class Endereco {
 
-    private String logradouro;
+    private String address;
 
-    private String bairro;
+    private String district;
 
-    private String cidade;
+    private String city;
 
-    private String UF;
+    private String state;
 
-    private Integer cep;
+    private Integer zipCode;
 
 }

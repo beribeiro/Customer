@@ -7,11 +7,11 @@ import lombok.Setter;
 @Setter
 public class Customer {
 
-    private String nome;
+    private String name;
 
-    private Integer cpf;
+    private String cpf;
 
-    private Endereco endereco;
+    private Endereco address;
 
-    private Customer clienteDB;
+    private Customer customerDB;
 }

@@ -1,15 +1,31 @@
 package br.com.client.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 public class EnderecoDto {
 
-    private String logradouro;
+    @JsonProperty("address")
+    private String address;
 
-    private String bairro;
+    @JsonProperty("district")
+    private String district;
 
-    private String cidade;
+    @JsonProperty("city")
+    private String city;
 
-    private String UF;
+    @JsonProperty("state")
+    private String state;
 
-    private String cep;
+    @JsonProperty("ZIP_code")
+    private String zipCode;
 
 }

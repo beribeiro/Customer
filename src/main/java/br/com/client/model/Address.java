@@ -1,6 +1,7 @@
 package br.com.client.model;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Column;
@@ -10,7 +11,8 @@ import javax.persistence.Table;
 
 @Getter
 @Setter
-@Table
+@Table(name = "ADDRESS")
+@NoArgsConstructor
 public class Address {
 
     @Id

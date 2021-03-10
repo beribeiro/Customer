@@ -1,4 +1,6 @@
 C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\validators\dto\ClienteDtoValidator.java
+C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\Application.java
+C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\mappers\dto\AddressMapper.java
 C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\services\ClientService.java
 C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\model\Address.java
 C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\exceptions\UnprocessableEntityException.java
@@ -7,9 +9,10 @@ C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\adapters
 C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\dto\ClienteDto.java
 C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\controller\ClientController.java
 C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\dto\EnderecoDto.java
-C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\application\Application.java
+C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\validators\dto\CpfValidator.java
 C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\domain\Endereco.java
+C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\utils\Regex.java
 C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\adapters\CustomerPersistenceImpl.java
-C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\mappers\CustomerMapper.java
 C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\domain\Customer.java
+C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\mappers\dto\CustomerMapper.java
 C:\Users\bruno\IdeaProjects\TesteBrasilPrev\src\main\java\br\com\client\model\Client.java
