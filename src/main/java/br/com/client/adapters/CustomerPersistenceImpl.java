@@ -1,17 +1,18 @@
 package br.com.client.adapters;
 
 import br.com.client.domain.Customer;
+import br.com.client.exceptions.UnprocessableEntityException;
 import br.com.client.mappers.domain.CustomerMapper;
 import br.com.client.mappers.model.CustomerModelMapper;
-import br.com.client.model.AddressModel;
 import br.com.client.model.CustomerModel;
+import br.com.fluentvalidator.context.Error;
+import br.com.fluentvalidator.context.ValidationResult;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
-import javax.persistence.LockModeType;
 import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
-import java.util.Optional;
+import java.util.Collections;
 
 @Repository
 public class CustomerPersistenceImpl implements CustomerPersistence<Customer> {
@@ -36,19 +37,10 @@ public class CustomerPersistenceImpl implements CustomerPersistence<Customer> {
             CustomerModel customerModel = entityManager.createNamedQuery(CustomerModel.CONSULTA_CUSTOMER_CPF, CustomerModel.class)
                     .setParameter("cpf", cpf).getSingleResult();
 
-            //final Optional<CustomerModel> customerModelOptional = Optional.ofNullable(entityManager.find(CustomerModel.class, cpf, LockModeType.PESSIMISTIC_WRITE));
-
-            //final CustomerModel customerModel = customerModelOptional.orElse(null);
-
             return CustomerModelMapper.INSTANCE.mapFrom(customerModel);
 
         } catch (NoResultException exception){
-            //client nao encontrado
+            throw new UnprocessableEntityException(ValidationResult.fail(Collections.singleton(Error.create("customer", "Customer not found", "422", cpf))));
         }
-
-
-        return null;
     }
-
-
 }

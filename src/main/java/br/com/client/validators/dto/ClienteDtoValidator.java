@@ -21,7 +21,7 @@ public class ClienteDtoValidator extends AbstractValidator<ClienteDto> {
                 .critical()
 
 
-                .must(stringSizeLessThanOrEqual(10))
+                .must(stringSizeLessThanOrEqual(50))
                 .withMessage("Nome deve ter no máximo 50 caracteres")
                 .withAttempedValue(ClienteDto::getName);
 
