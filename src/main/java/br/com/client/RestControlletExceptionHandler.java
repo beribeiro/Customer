@@ -17,7 +17,7 @@ public class RestControlletExceptionHandler {
     @ExceptionHandler
     ResponseEntity<Object> handleException (final Exception exception){
 
-        Error error = new Error(HttpStatus.INTERNAL_SERVER_ERROR.toString(), "Erro genérico");
+        final Error error = new Error(HttpStatus.INTERNAL_SERVER_ERROR.toString(), "Erro genérico");
 
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(error);
 
