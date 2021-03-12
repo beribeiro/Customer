@@ -6,6 +6,7 @@ import br.com.client.mappers.dto.AddressDtoMapper;
 import br.com.client.model.CustomerModel;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
+import org.mapstruct.MappingTarget;
 import org.mapstruct.factory.Mappers;
 
 @Mapper(uses = AddresMapper.class)
@@ -23,4 +24,9 @@ public abstract class CustomerMapper {
     @Mapping(source = "address", target = "enderecoDto")
 
     public abstract ClienteDto mapToDto (Customer customer);
+
+    @Mapping(source = "name",target = "name")
+    @Mapping(source = "cpf", target = "cpf")
+    @Mapping(source = "address", target = "addressModel")
+    public abstract CustomerModel updateFrom (Customer customer, @MappingTarget  CustomerModel customerModel);
 }

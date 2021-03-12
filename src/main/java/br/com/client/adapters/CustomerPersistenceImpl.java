@@ -22,10 +22,23 @@ public class CustomerPersistenceImpl implements CustomerPersistence<Customer> {
 
     @Override
     public void save(Customer customer) {
+        try{
 
-        CustomerModel customerModel = CustomerMapper.INSTANCE.mapFrom(customer);
+            CustomerModel customerModel = entityManager.createNamedQuery(CustomerModel.CONSULTA_CUSTOMER_CPF, CustomerModel.class)
+                    .setParameter("cpf", customer.getCpf()).getSingleResult();
 
-        entityManager.merge(customerModel);
+            customerModel = CustomerMapper.INSTANCE.updateFrom(customer, customerModel);
+
+            entityManager.merge(customerModel);
+
+
+        } catch (NoResultException exception){
+
+            CustomerModel customerModel = CustomerMapper.INSTANCE.mapFrom(customer);
+
+            entityManager.persist(customerModel);
+
+        }
 
     }
 

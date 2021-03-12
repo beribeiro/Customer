@@ -11,7 +11,7 @@
     </parent>
 
     <groupId>org.customer</groupId>
-    <artifactId>TesteBrasilPrev</artifactId>
+    <artifactId>Customer</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>

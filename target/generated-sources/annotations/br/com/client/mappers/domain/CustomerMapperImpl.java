@@ -8,7 +8,7 @@ import org.mapstruct.factory.Mappers;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2021-03-10T15:45:17-0300",
+    date = "2021-03-12T20:02:58-0300",
     comments = "version: 1.4.1.Final, compiler: javac, environment: Java 1.8.0_281 (Oracle Corporation)"
 )
 public class CustomerMapperImpl extends CustomerMapper {
@@ -43,5 +43,18 @@ public class CustomerMapperImpl extends CustomerMapper {
         clienteDto.setEnderecoDto( addresMapper.mapToDto( customer.getAddress() ) );
 
         return clienteDto;
+    }
+
+    @Override
+    public CustomerModel updateFrom(Customer customer, CustomerModel customerModel) {
+        if ( customer == null ) {
+            return null;
+        }
+
+        customerModel.setName( customer.getName() );
+        customerModel.setCpf( customer.getCpf() );
+        customerModel.setAddressModel( addresMapper.mapFrom( customer.getAddress() ) );
+
+        return customerModel;
     }
 }

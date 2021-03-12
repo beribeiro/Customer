@@ -31,6 +31,10 @@ public class ClientController {
 
         clienteDtoValidator.validate(clienteDto).isInvalidThrow(UnprocessableEntityException.class);
 
+        Customer customer = CustomerDtoMapper.INSTANCE.mapFrom(clienteDto);
+
+        service.createOrUpdateCustomer(customer);
+
         return ResponseEntity.status(HttpStatus.OK).body(clienteDto);
     }
     

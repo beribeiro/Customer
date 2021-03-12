@@ -6,14 +6,14 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
 
-@Mapper
+@Mapper(uses = AddressModelMapper.class)
 public abstract class CustomerModelMapper {
 
     public static final CustomerModelMapper INSTANCE = Mappers.getMapper(CustomerModelMapper.class);
 
     @Mapping(source = "name",target = "name")
     @Mapping(source = "cpf", target = "cpf")
-    @Mapping(target = "address", ignore = true)
+    @Mapping(source = "addressModel", target = "address")
     @Mapping(target = "customerDB", ignore = true)
     public abstract Customer mapFrom (CustomerModel customerModel);
 }

@@ -10,7 +10,7 @@ logs/
 *.mvn
 *.fpr
 *.fpr.scan
-.iml
+*.iml
 .vscode/
 /bin/
 *.jar

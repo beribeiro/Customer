@@ -14,8 +14,8 @@ import javax.persistence.*;
 public class AddressModel {
 
     @Id
-    @GeneratedValue
-    @Column(name ="ID_ADDRESS", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name ="ID_ADDRESS", updatable = false)
     private Long id;
 
     @Column(name = "ADDRESS",nullable = false)
@@ -32,5 +32,8 @@ public class AddressModel {
 
     @Column(name = "ZIP_CODE", nullable = false)
     private Integer zipCode;
+
+    @OneToOne(mappedBy = "addressModel")
+    private CustomerModel customerModel;
 
 }

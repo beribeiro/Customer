@@ -22,7 +22,7 @@ public class CustomerModel {
     public static final String CONSULTA_CUSTOMER_CPF = "CONSULTA_CUSTOMER_CPF";
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name ="ID_CUSTOMER", updatable = false, nullable = false)
     private Long id;
 
@@ -32,8 +32,8 @@ public class CustomerModel {
     @Column(name = "CPF_CUSTOMER", nullable = false)
     private String cpf;
 
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.REFRESH)
-    @JoinColumn(name = "ID_ADDRESS", nullable = false)
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "ID_ADDRESS")
     private AddressModel addressModel;
 
     public CustomerModel(String name, String cpf, AddressModel addressModel) {
