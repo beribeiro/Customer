@@ -1,3 +1,17 @@
-# Default ignored files
-/shelf/
-/workspace.xml
+target/
+.idea
+.classpath
+.project
+.settings/
+.factorypath
+log/
+.apt_generated
+logs/
+*.mvn
+*.fpr
+*.fpr.scan
+*.iml
+.vscode/
+/bin/
+*.jar
+*.xml
